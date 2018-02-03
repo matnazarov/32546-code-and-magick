@@ -44,11 +44,8 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillStyle = 'black';
     ctx.fillText(Math.round(times[i]), barX, TEXT_Y + 2 * HEIGHT_FONT + 1.5 * GAP + HEIGHT_GRAPHIC - heightBar);
     ctx.fillText(names[i], barX, TEXT_Y + 3 * HEIGHT_FONT + 2.5 * GAP + HEIGHT_GRAPHIC);
-    if (names[i] == 'Вы') {
-      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-    } else {
-      ctx.fillStyle = 'rgba(0, 0, 128,' + Math.random() + ')';
-    }
+   //условие ? выражение1 : выражение2
+    names[i] == 'Вы' ? ctx.fillStyle = 'rgb(0, 0, 255)' : ctx.fillStyle = 'rgba(0, 0, 128,' + Math.random() + ')';
     ctx.fillRect(barX, TEXT_Y + 3 * HEIGHT_FONT + GAP + HEIGHT_GRAPHIC - heightBar, WIDTH_BAR, heightBar);
   }
 };
